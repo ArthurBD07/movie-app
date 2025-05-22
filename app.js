@@ -303,7 +303,7 @@ async function add_to_dom_trending() {
     add_click_effect_to_card(cards)
 }
 
-fetch('http://localhost:3001/perfil')
+fetch('http://localhost:3000/perfil')
   .then(res => res.json())
   .then(perfil => {
     document.getElementById('nomeUsuario').textContent = perfil.nome;
@@ -312,7 +312,7 @@ fetch('http://localhost:3001/perfil')
   });
 
 
-  fetch('http://localhost:3001/perfil')
+  fetch('http://localhost:3000/perfil')
   .then(res => res.json())
   .then(perfil => {
     document.getElementById('nomePerfil').textContent = perfil.nome;
