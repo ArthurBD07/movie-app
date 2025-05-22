@@ -13,14 +13,37 @@ body {
 }
 
 .card {
-    width: clamp(150px, 95vw, 250px);
-    box-shadow: 0 0 .5rem rgba(255, 0, 0, 1);
-    outline: 2px solid rgba(255, 0, 0, .6);
-    overflow: hidden;
-    color: #fff;
-    cursor: pointer;
-    border-radius: .5rem;
+  width: calc((100% / 5) - 1.6rem); /* 5 cards por linha */
+  background-color: #222;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 1rem rgba(255, 0, 0, 0.8);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  transition: transform 0.3s ease;
 }
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .img {
+  height: 350px; /* altura maior para cartaz */
+  overflow: hidden;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.6);
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+
+.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+
+
 .img {
     width: 100%;
     height: 200px;
@@ -265,3 +288,76 @@ header {
 }
 
 
+#footerPerfil {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 2px solid #444;
+}
+
+.autor-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.autor-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.autor-info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.search {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.favorites-btn {
+    background-color: transparent;
+    border: 2px solid rgba(255, 0, 0, .6);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.favorites-btn:hover {
+    background-color: rgba(255, 0, 0, .6);
+}
+
+.carrossel-title {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0 0.5rem; /* espaço em cima e embaixo */
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+}
+
+
+.movies-section-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.7);
+}

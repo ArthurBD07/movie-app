@@ -278,7 +278,7 @@ add_to_dom_trending()
 async function add_to_dom_trending() {
     const data = await get_trending_movies()
 
-    trending_el.innerHTML = data.slice(0, 5).map(e => {
+    trending_el.innerHTML = data.slice(0, 10).map(e => {
         return `
             <div class="card" data-id="${e.id}">
                 <div class="img">
@@ -303,3 +303,22 @@ async function add_to_dom_trending() {
     add_click_effect_to_card(cards)
 }
 
+fetch('http://localhost:3001/perfil')
+  .then(res => res.json())
+  .then(perfil => {
+    document.getElementById('nomeUsuario').textContent = perfil.nome;
+    document.getElementById('emailUsuario').textContent = perfil.email;
+    // etc.
+  });
+
+
+  fetch('http://localhost:3001/perfil')
+  .then(res => res.json())
+  .then(perfil => {
+    document.getElementById('nomePerfil').textContent = perfil.nome;
+    document.getElementById('minibioPerfil').textContent = perfil.minibio;
+    document.getElementById('cursoTurma').textContent = `${perfil.curso} - ${perfil.turma}`;
+    document.getElementById('linkedinPerfil').textContent = `LinkedIn: ${perfil.linkedin}`;
+    document.getElementById('githubPerfil').textContent = `GitHub: ${perfil.github}`;
+    document.getElementById('instagramPerfil').textContent = `Instagram: ${perfil.instagram}`;
+  });

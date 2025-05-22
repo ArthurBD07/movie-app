@@ -11,24 +11,18 @@
 </head>
 
 <body>
-    <header> 
+    <header>
         <img src="imagens/LOGOfilm.png" alt="Logo do site" class="logo">
-     </header>
-
-<div class="carrossel-container">
-  <button onclick="sliderScrollLeft()" class="arrow left">&#9664;</button>
-  <div class="carrosselBox"></div>
-  <button onclick="sliderScrollRight()" class="arrow right">&#9654;</button>
-</div>
-
-
-    <div class="container">
         <div class="search">
             <input type="text" placeholder="Search Movie...">
             <button>Search</button>
         </div>
-        <div class="movies-container favorites">
-            <h1>Favorites</h1>
+    </header>
+
+    <div class="container">
+        <div class="movies-container trending">
+            <h2 class="movies-section-title">Lançamentos e Destaques</h2>
+
             <div class="movies-grid">
                 <div class="card" data-id="123456">
                     <div class="img">
@@ -48,8 +42,21 @@
                 </div>
             </div>
         </div>
-        <div class="movies-container trending">
-            <h1>Mais Recentes</h1>
+
+        <h1 class="carrossel-title">Mais opções</h1>
+        
+
+        </div>
+
+
+        <div class="carrossel-container">
+            <button onclick="sliderScrollLeft()" class="arrow left">&#9664;</button>
+            <div class="carrosselBox"></div>
+            <button onclick="sliderScrollRight()" class="arrow right">&#9654;</button>
+        </div>
+
+        <div class="movies-container favorites">
+            <h1>Favorites</h1>
             <div class="movies-grid">
                 <div class="card" data-id="123456">
                     <div class="img">
@@ -132,23 +139,18 @@
         </div>
     </div>
 
-    <div class="center">
-        <div class="carrossel">
-            <div class="carrosselBox">
-                <!-- aqui fica o conteudo dinamico -->
-            </div>
-            <a class="switchLeft sliderButton btnstyle" onclick="sliderScrollLeft()">
-                < </a>
-                    <a class="switchRight sliderButton btnstyle" onclick="sliderScrollRight()">
-                        >
-                    </a>
+    <footer id="footerPerfil">
+        <div class="autor-info">
+            <h3 id="nomePerfil"></h3>
+            <p id="minibioPerfil"></p>
+            <p id="cursoTurma"></p>
+            <p id="linkedinPerfil"></p>
+            <p id="githubPerfil"></p>
+            <p id="instagramPerfil"></p>
         </div>
-    </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"></script>
-
-
-
-
 </body>
 
 </html>
