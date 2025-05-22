@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,19 @@
     <script src="app.js" defer></script>
     <title>Movie App</title>
 </head>
+
 <body>
+    <header> 
+        <img src="imagens/LOGOfilm.png" alt="Logo do site" class="logo">
+     </header>
+
+<div class="carrossel-container">
+  <button onclick="sliderScrollLeft()" class="arrow left">&#9664;</button>
+  <div class="carrosselBox"></div>
+  <button onclick="sliderScrollRight()" class="arrow right">&#9654;</button>
+</div>
+
+
     <div class="container">
         <div class="search">
             <input type="text" placeholder="Search Movie...">
@@ -17,7 +30,7 @@
         <div class="movies-container favorites">
             <h1>Favorites</h1>
             <div class="movies-grid">
-                <!-- <div class="card" data-id="123456">
+                <div class="card" data-id="123456">
                     <div class="img">
                         <img src="https://unsplash.it/500/1000" alt="">
                     </div>
@@ -32,13 +45,13 @@
                             <span>10-04-2022</span>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="movies-container trending">
-            <h1>Trending</h1>
+            <h1>Mais Recentes</h1>
             <div class="movies-grid">
-                <!-- <div class="card" data-id="123456">
+                <div class="card" data-id="123456">
                     <div class="img">
                         <img src="https://unsplash.it/500/1000" alt="">
                     </div>
@@ -53,13 +66,13 @@
                             <span>10-04-2022</span>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
 
     <div class="popup-container">
-        <!-- <span class="x-icon">&#10006;</span>
+        <span class="x-icon">&#10006;</span>
         <div class="content">
             <div class="left">
                 <div class="poster-img">
@@ -105,14 +118,37 @@
                 </div>
                 <div class="overview">
                     <h2>Overview</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus, quos molestiae fuga voluptatem totam odit voluptates ullam et distinctio?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere necessitatibus, quos molestiae
+                        fuga voluptatem totam odit voluptates ullam et distinctio?</p>
                 </div>
                 <div class="trailer">
                     <h2>Trailer</h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kmo8NLKkfcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kmo8NLKkfcQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
+
+    <div class="center">
+        <div class="carrossel">
+            <div class="carrosselBox">
+                <!-- aqui fica o conteudo dinamico -->
+            </div>
+            <a class="switchLeft sliderButton btnstyle" onclick="sliderScrollLeft()">
+                < </a>
+                    <a class="switchRight sliderButton btnstyle" onclick="sliderScrollRight()">
+                        >
+                    </a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"></script>
+
+
+
+
 </body>
+
 </html>

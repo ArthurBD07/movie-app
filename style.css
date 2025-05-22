@@ -183,3 +183,85 @@ body {
         right: 20px;
     }
 }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #090909;
+}
+
+.center {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+
+
+header {
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  height: 60px;             
+  background-color: #000;   
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  height: 120px; 
+}
+
+.carrossel-container {
+  position: relative;
+  margin-top: 80px; /* abaixo do header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #111;
+}
+
+.carrosselBox {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+.slider-img {
+  height: 220px;
+  width: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.slider-img:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
