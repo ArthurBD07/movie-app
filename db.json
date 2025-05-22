@@ -1,0 +1,32 @@
+{
+  "perfil": {
+    "id": 1,
+    "nome": "Arthur Nunes", 
+    "minibio": "Estudante dedicado de ADS",
+    "curso": "ADS",
+    "turma": "1º período - Noite",
+    "linkedin": "https://www.linkedin.com/in/arthur_nunes-dev",
+    "github": "https://github.com/ArthurBD07",
+    "instagram": "https://instagram.com/Arthur_nunes_dev"
+  },
+  "series": [
+    {
+      "id": 1,
+      "titulo": "Breaking Bad",
+      "genero": "Crime / Drama",
+      "nota": 9.5
+    },
+    {
+      "id": 2,
+      "titulo": "Stranger Things",
+      "genero": "Ficção Científica / Suspense",
+      "nota": 8.7
+    },
+    {
+      "id": 3,
+      "titulo": "Mr. Robot",
+      "genero": "Tecnologia / Drama Psicológico",
+      "nota": 8.6
+    }
+  ]
+}
